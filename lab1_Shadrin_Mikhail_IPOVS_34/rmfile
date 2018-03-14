@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if test -f $1
+then
+	echo Вы действительно хотите удалить файл $1? y/n
+	read answer
+	if [ $answer = 'y' ]
+	then
+	   echo Файл $1 удалён
+	   rm $1
+	fi
+else
+	echo Файл $1 не найден
+fi
